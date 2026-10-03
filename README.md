@@ -373,4 +373,107 @@ A production implementation could evolve into a service-oriented architecture:
 ```text
                     ┌─────────────────────┐
                     │  YouTube Client     │
-                    │ Web
+                    │ Web / iOS / Android │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Consent Orchestrator│
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+      Age Verification   Guardian Identity   Consent Store
+             │                 │                 │
+             ▼                 ▼                 ▼
+       Account Data       Verification API    Audit Logs
+                               │
+                               ▼
+                       Privacy Controls
+                               │
+                 ┌─────────────┼─────────────┐
+                 ▼             ▼             ▼
+              Ads         Profiling    Recommendations
+```
+
+A production system would additionally require robust security, authorization, auditability, data minimization, consent lifecycle management, accessibility, failure handling, and legal/privacy review.
+
+---
+
+## Future Improvements
+
+Potential next iterations could include:
+
+- Real consent-state persistence
+- Authentication and role-based access control
+- Production identity-verification integration
+- Consent audit history
+- Parent notification preferences
+- Multi-child family management
+- Accessibility improvements
+- Localization for Indian languages
+- Offline/error recovery flows
+- Experimentation framework for consent conversion
+- Platform-specific funnel analysis
+- Automated compliance alerts
+- Real-time monitoring dashboards
+- A/B testing of consent UX
+
+---
+
+## Product Success Metrics
+
+A production version could be evaluated using a combination of **growth, UX, compliance, and trust metrics**.
+
+### Primary metrics
+
+- Verifiable parental consent completion rate
+- Time to complete consent
+- Verification success rate
+- Consent abandonment rate
+
+### Guardrail metrics
+
+- Percentage of teen accounts with protections correctly enabled
+- Privacy violations
+- Consent-related complaints
+- Incorrect consent states
+- Withdrawal completion rate
+
+### Platform metrics
+
+- Consent completion by platform
+- Verification failure by device type
+- Drop-off by operating system
+- Funnel latency by verification method
+
+---
+
+## Disclaimer
+
+This project is an independent **product management / UX case-study prototype** created for demonstration and portfolio purposes.
+
+It is **not affiliated with, sponsored by, or endorsed by YouTube, Google, DigiLocker, UIDAI, or the Government of India**.
+
+All users, metrics, account information, consent records, and analytics shown in the prototype are fictional/mock data.
+
+The regulatory references and product concepts represented in the prototype should not be treated as legal advice or as confirmation that a particular implementation satisfies applicable law.
+
+---
+
+## Author
+
+**Anushka Gupta**
+
+B.Tech Computer Science & Engineering — Big Data Analytics  
+SRM Institute of Science and Technology
+
+### Interests
+
+Product Management · Data Analytics · AI/ML · Data Engineering · Technology & UX
+
+---
+
+## License
+
+This project is intended for educational, portfolio, and product-case-study purposes.
